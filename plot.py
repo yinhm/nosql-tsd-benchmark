@@ -25,6 +25,7 @@ for i in xrange(len(benchitem)):
         tit.append(k)
     
     figure(num=i, figsize=(6, 4), dpi=80)
+    subplots_adjust(left=.22)
     barh(pos, val, align='center')
     yticks(pos, tit)
     xlabel('Time')
