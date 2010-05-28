@@ -69,7 +69,7 @@ Benchmark.bm do |x, logger|
       records = []
       key, value = bdb.misc("iternext")
       while key == s
-        records.push(value)
+        records.push(JSON.parse(value))
         key, value = bdb.misc("iternext")
       end
     end

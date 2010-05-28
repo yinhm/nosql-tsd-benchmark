@@ -49,6 +49,7 @@ Benchmark.bm do |x, logger|
     symbols.each do |s|
       query = TDBQRY.new(tdb)
       query.addcond("symbol", TDBQRY::QCSTREQ, s)
+      query.setorder("date", TDBQRY::QOSTRDESC)
       records = query.search.collect do |pkey|
         tdb.get(pkey)
       end
