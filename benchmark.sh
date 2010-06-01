@@ -33,4 +33,7 @@ echo "=> redis"
 echo "flush db #5"
 ruby redis_list.rb
 
+echo "=> Berkeley DB"
+ruby bdb.rb
+
 python plot.py
